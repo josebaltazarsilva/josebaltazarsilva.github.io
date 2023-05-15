@@ -1,0 +1,67 @@
+body {
+    background-color: rgb(233, 113, 217);
+    margin: 0; /* Eliminar el margen predeterminado del cuerpo */
+    height: 100vh; /* Hacer que el cuerpo tenga la altura completa de la ventana */
+    display: flex; /* Usar flexbox para centrar la tarjeta */
+    justify-content: center; /* Centrar la tarjeta horizontalmente */
+    align-items: center; /* Centrar la tarjeta verticalmente */
+}
+
+#card {
+    display: flex; /* Usar flexbox para centrar la imagen en la tarjeta */
+    justify-content: center; /* Centrar la imagen horizontalmente en la tarjeta */
+    align-items: center; /* Centrar la imagen verticalmente en la tarjeta */
+    width: 100%; /* Hacer que la tarjeta tenga el ancho completo del cuerpo */
+    height: 100%; /* Hacer que la tarjeta tenga la altura completa del cuerpo */
+}
+
+.message {
+    display: none; /* El mensaje está oculto por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top 2s;
+    flex-direction: column;
+}
+
+/* Al hacer click, el mensaje sube */
+.message.active {
+    display: block;
+    top: 50%;
+}
+/* Formato de la imagen y el texto en el mensaje */
+.message img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: cover;
+}
+.message p {
+    text-align: center;
+}
+
+/* Oculta la tarjeta cuando se desactiva */
+#card.deactivate {
+    display: none;
+}
+
+#nextButton {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#nextButton:hover {
+    background-color: #ddd;
+}
+
+
+
